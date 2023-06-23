@@ -46,7 +46,7 @@ const Nav = () => {
             session?.user 
             ? 
               <div className="flex gap-3 md:gap-5">
-                <Link href="/create-prompt"
+                <Link href="/pages/create-prompt"
                 className="black_btn">
                   Create Post
                 </Link>
@@ -56,7 +56,7 @@ const Nav = () => {
 
                 <Link href="profile">
                   <Image
-                  src="/assets/images/penguin.png"
+                  src= {session.user.image}
                   alt="profile"
                   width={37}
                   height={37}
@@ -90,7 +90,7 @@ const Nav = () => {
           ?
             <div className="flex">
               <Image
-                  src="/assets/images/penguin.png"
+                  src={session.user.image}
                   alt="profile"
                   width={37}
                   height={37}
@@ -108,7 +108,7 @@ const Nav = () => {
                         My profile
                       </Link>
                       <Link
-                      href={"/create-prompt"}
+                      href={"/pages/create-prompt"}
                       className="dropdown_link"
                       onClick={()=>setDropDown(false)}
                       >
