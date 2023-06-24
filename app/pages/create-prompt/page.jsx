@@ -30,9 +30,9 @@ const CreatePrompt = async(e) =>{
         })
     })
     if(response.ok){
-        console.log(response)
-        console.log(session)
-       // Router.push('/');
+        //console.log(response)
+       // console.log(session)
+       Router.push('/');
     }
    }catch(err){
     console.log(err);

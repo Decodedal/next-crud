@@ -1,6 +1,11 @@
 import Feed from "@/components/Feed"
+import { prisma } from "@/db/prisma"
 
-const Home = () => {
+const Home = async() => {
+
+  const posts = await prisma.post.findMany()
+
+
   return (
     <section className="w-full flex-center flex-col">
         <h1 className="head_text text-center">
