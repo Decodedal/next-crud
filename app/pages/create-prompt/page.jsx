@@ -9,6 +9,7 @@ import Form from "@/components/Form";
 function CreatePost() {
 
     const { data: session} = useSession();
+    const router = useRouter()
 
     const [submitting, setSubmitting] = useState(false);
     const [post, setPost] = useState({
@@ -32,7 +33,7 @@ const CreatePrompt = async(e) =>{
     if(response.ok){
         //console.log(response)
        // console.log(session)
-       Router.push('/');
+       router.push('/');
     }
    }catch(err){
     console.log(err);
